@@ -1,5 +1,5 @@
 #pragma once
-#include<string>
+#include <string>
 #include "node.h"
 #include "dataframe.h"
 enum direction
@@ -9,12 +9,12 @@ enum direction
 };
 class link
 {
-    node* nodes;
+    node *nodes;
     direction dir;
     int num_nodes;
-    public :
 
-    link(node* nds, direction d, int n)
+public:
+    link(node *nds, direction d, int n)
     {
         nodes = nds;
         dir = d;
@@ -22,7 +22,4 @@ class link
     }
 
     void transmit(dataframe data);
-
 };
-
- 

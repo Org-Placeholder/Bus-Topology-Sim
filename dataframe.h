@@ -1,5 +1,5 @@
 #pragma once
-#include<string>
+#include <string>
 using namespace std;
 class dataframe
 {
@@ -8,8 +8,7 @@ class dataframe
     string src_mac_address;
     string dest_mac_address;
 
-    public :
-
+public:
     dataframe(string msg, int snum, string src, string dest)
     {
         message = msg;
@@ -22,7 +21,7 @@ class dataframe
     {
         return src_mac_address;
     }
-    
+
     string get_dest_mac_address()
     {
         return dest_mac_address;

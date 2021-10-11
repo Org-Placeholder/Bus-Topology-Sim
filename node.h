@@ -1,20 +1,21 @@
 #pragma once
 #include "dataframe.h"
-#include<string>
-#include<iostream>
-#include<vector>
+#include <string>
+#include <iostream>
+#include <vector>
 using namespace std;
 class link;
 class node
 {
     int device_id;
     string mac_address;
-    link* links;
+    link *links;
     int num_links;
-    public :
- 
+
+public:
     node()
-     {}
+    {
+    }
 
     node(int d_id, string m_address)
     {
@@ -22,20 +23,20 @@ class node
         mac_address = m_address;
     }
     void transmit(string message, int seq_num, string dest_mac_address);
-    
+
     void recieve(dataframe data)
     {
         cout << data.get_message() << " recieved at " << device_id << endl;
     };
-    
+
     string get_mac_address()
     {
         return mac_address;
     }
 
-    void set_links(link *l,int n)
+    void set_links(link *l, int n)
     {
-        links=l;
-        num_links=n;
+        links = l;
+        num_links = n;
     }
 };
