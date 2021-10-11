@@ -22,4 +22,7 @@ class link
     }
 
     void transmit(dataframe data);
+
 };
+
+ 

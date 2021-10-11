@@ -1,4 +1,5 @@
 #include "link.h"
+#pragma once
 
 void link::transmit(dataframe data)
 {

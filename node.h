@@ -1,7 +1,8 @@
 #pragma once
-#include<string>
 #include "dataframe.h"
-#include <iostream>
+#include<string>
+#include<iostream>
+#include<vector>
 using namespace std;
 class link;
 class node
@@ -11,6 +12,10 @@ class node
     link* links;
     int num_links;
     public :
+ 
+    node()
+     {}
+
     node(int d_id, string m_address)
     {
         device_id = d_id;
@@ -28,9 +33,9 @@ class node
         return mac_address;
     }
 
-    void set_links(link* l, int n)
+    void set_links(link *l,int n)
     {
-        links = l;
-        num_links = n;
+        links=l;
+        num_links=n;
     }
 };

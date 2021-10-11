@@ -1,4 +1,5 @@
 #include "node.h"
+#pragma once
 void node::transmit(string message, int seq_num, string dest_mac_address)
 {
     dataframe data(message, seq_num, mac_address, dest_mac_address);
