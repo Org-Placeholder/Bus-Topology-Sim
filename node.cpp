@@ -21,7 +21,17 @@ void node::transmit(string message, int seq_num, string dest_mac_address)
 
 void node::recieve(dataframe data)
 {
-    cout << data.get_message() << " recieved at device " << device_id << endl;
+    bool broadcast = false;
+    if (data.get_dest_mac_address() == "FF:FF:FF:FF:FF:FF")
+    {
+        broadcast = true;
+        //if destination mac address is the broadcast adress (FF:FF:FF:FF:FF:FF),
+        //then we make the broadcast flag true.
+    }
+    if (data.get_dest_mac_address() == mac_address || broadcast)
+    {
+        cout << data.get_message() << " recieved at device " << device_id << endl;       
+    }
 }
 
 void node::set_links(link *l, int n)
